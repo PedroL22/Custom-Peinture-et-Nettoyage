@@ -1,3 +1,4 @@
+import HeroCarousel from "@/components/HeroCarousel";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,7 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="font-bold text-xl">Hello World!</main>
+      <main className="font-sans">
+        <section>
+          <HeroCarousel />
+        </section>
+      </main>
     </>
   );
 }
