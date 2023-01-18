@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../images/logo-white2.png";
@@ -10,8 +10,24 @@ export default function Header() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  function handleScroll() {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 0) {
+      header?.classList.add("scrolled");
+    } else {
+      header?.classList.remove("scrolled");
+    }
+  }
+
   return !isMobile ? (
-    <div className="fixed z-20 w-full font-sans">
+    <div className="fixed z-20 w-full font-sans header h-32">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between">
           <Link href="/">
@@ -51,7 +67,7 @@ export default function Header() {
       </div>
     </div>
   ) : (
-    <div className="fixed z-20 w-full font-sans">
+    <div className="fixed z-20 w-full font-sans header">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between">
           <Link href="/">
@@ -63,7 +79,7 @@ export default function Header() {
           </Link>
           <div className="flex -ml-[100vw]">
             {isOpen ? (
-              <div className="flex flex-col h-screen w-screen text-center bg-gray-800">
+              <div className="flex flex-col h-screen w-screen text-center bg-black opacity-80">
                 <div className="justify-between">
                   <div />
                   <IoMdClose
@@ -100,7 +116,7 @@ export default function Header() {
             ) : (
               <GiHamburgerMenu
                 size={32}
-                className="text-white cursor-pointer m-2"
+                className="text-white cursor-pointer m-3"
                 onClick={() => setIsOpen(true)}
               />
             )}
