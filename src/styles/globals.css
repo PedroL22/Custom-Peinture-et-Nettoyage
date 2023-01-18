@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Carousel arrows */
+.carousel-arrows .carousel-control-prev,
+.carousel-arrows .carousel-control-next {
+  z-index: 10;
+}

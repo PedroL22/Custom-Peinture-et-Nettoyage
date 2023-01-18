@@ -7,36 +7,41 @@ import HeroImage3 from "../images/orange-living-room-accent-wall3.jpg";
 
 export default function HeroCarousel() {
   return (
-    <div className="w-screen h-[300px] max-h-[720px]">
-      <div className="relative">
-        <h1 className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 text-white lg:text-6xl px-[15vw] lg:px-0 font-semibold text-center mx-auto mt-[40vh] md:mt-[23rem] w-full max-w-4xl">
-          Service de NETTOYAGE et de PEINTURE RÉSIDENTIEL
-        </h1>
+    <div className="flex justify-center items-center">
+      <div className="absolute z-10">
+        <div className="relative flex">
+          <h1 className="text-white text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mx-[10vw]">
+            Service de NETTOYAGE et de PEINTURE RÉSIDENTIEL
+          </h1>
+        </div>
       </div>
-
-      <Carousel fade interval={3000}>
+      <Carousel
+        fade
+        interval={4000}
+        className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] mx-auto carousel-arrows"
+      >
         <Carousel.Item>
-          <div className="absolute w-screen h-[80vh] md:h-[720px] bg-gradient-to-t from-transparent to-black opacity-50"></div>
+          <div className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] absolute bg-gradient-to-t from-transparent to-black opacity-50"></div>
           <Image
             src={HeroImage1}
             alt=""
-            className="h-[80vh] md:h-[720px] w-screen object-cover"
+            className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] object-cover"
           />
         </Carousel.Item>
         <Carousel.Item>
-          <div className="absolute w-screen h-[80vh] md:h-[720px] bg-gradient-to-t from-transparent to-black opacity-50"></div>
+          <div className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] absolute bg-gradient-to-t from-transparent to-black opacity-50"></div>
           <Image
             src={HeroImage2}
             alt=""
-            className="h-[80vh] md:h-[720px] w-screen object-cover"
+            className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] object-cover"
           />
         </Carousel.Item>
         <Carousel.Item>
-          <div className="absolute w-screen h-[80vh] md:h-[720px] bg-gradient-to-t from-transparent to-black opacity-50"></div>
+          <div className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] absolute bg-gradient-to-t from-transparent to-black opacity-50"></div>
           <Image
             src={HeroImage3}
             alt=""
-            className="h-[80vh] md:h-[720px] w-screen object-cover"
+            className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] object-cover"
           />
         </Carousel.Item>
       </Carousel>

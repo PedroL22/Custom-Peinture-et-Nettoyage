@@ -15,11 +15,11 @@ export default function Home() {
           name="keywords"
           content="Montréal, nettoyage, peinture résidentiel, cleaning, house painting"
         />
+        <meta name="author" content="Marco Antonio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <Header />
         <section>
           <HeroCarousel />
         </section>
