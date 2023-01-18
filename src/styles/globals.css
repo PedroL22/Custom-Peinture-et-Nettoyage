@@ -7,3 +7,9 @@
 .carousel-arrows .carousel-control-next {
   z-index: 10;
 }
+
+@media (max-width: 1024px) {
+  .text-center-bug {
+    text-align: center;
+  }
+}

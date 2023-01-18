@@ -10,14 +10,14 @@ export default function HeroCarousel() {
     <div className="flex justify-center items-center">
       <div className="absolute z-10">
         <div className="relative flex">
-          <h1 className="text-white text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mx-[10vw]">
+          <h1 className="text-white text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mx-[15vw] max-w-[900px]">
             Service de NETTOYAGE et de PEINTURE RÉSIDENTIEL
           </h1>
         </div>
       </div>
       <Carousel
         fade
-        interval={4000}
+        interval={4500}
         className="w-full h-[30vh] sm:h-[40vh] md:h-[720px] mx-auto carousel-arrows"
       >
         <Carousel.Item>

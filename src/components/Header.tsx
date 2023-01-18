@@ -65,7 +65,7 @@ export default function Header() {
             {isOpen ? (
               <div className="flex flex-col h-screen w-screen text-center bg-gray-800">
                 <div className="justify-between">
-                  <div></div>
+                  <div />
                   <IoMdClose
                     size={32}
                     className="text-white cursor-pointer float-right m-3"
