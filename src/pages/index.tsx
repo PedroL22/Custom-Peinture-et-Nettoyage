@@ -23,12 +23,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <section id="first-section">
+        <section id="accueil">
           <HeroCarousel />
         </section>
         <section
           className="p-6 sm:py-16 sm:px-28 md:py-20 md:px-32"
-          id="second-section"
+          id="a-propos"
         >
           <div className="mx-auto lg:flex lg:gap-10 w-80 sm:w-[28rem] md:w-[36rem] lg:w-[55rem]">
             <Image

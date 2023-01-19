@@ -40,14 +40,14 @@ export default function Header() {
           <div className="flex px-10 py-12">
             <Link
               scroll={false}
-              href="/#first-section"
+              href="/#accueil"
               className="uppercase no-underline text-white text-2xl font-semibold mx-2 whitespace-nowrap"
             >
               accueil
             </Link>
             <Link
               scroll={false}
-              href="/#second-section"
+              href="/#a-propos"
               className="uppercase no-underline text-white text-2xl font-semibold mx-2 whitespace-nowrap"
             >
               à propos
@@ -92,7 +92,7 @@ export default function Header() {
                 </div>
                 <Link
                   scroll={false}
-                  href="/#first-section"
+                  href="/#accueil"
                   onClick={() => setIsOpen(false)}
                   className="uppercase no-underline text-white text-2xl font-semibold mx-2 my-4"
                 >
@@ -100,7 +100,7 @@ export default function Header() {
                 </Link>
                 <Link
                   scroll={false}
-                  href="/#second-section"
+                  href="/#a-propos"
                   onClick={() => setIsOpen(false)}
                   className="uppercase no-underline text-white text-2xl font-semibold mx-2 my-4"
                 >
