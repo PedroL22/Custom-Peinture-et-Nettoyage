@@ -39,13 +39,15 @@ export default function Header() {
           </Link>
           <div className="flex px-10 py-12">
             <Link
-              href="/"
+              scroll={false}
+              href="#first-section"
               className="uppercase no-underline text-white text-2xl font-semibold mx-2 whitespace-nowrap"
             >
               accueil
             </Link>
             <Link
-              href="/"
+              scroll={false}
+              href="#second-section"
               className="uppercase no-underline text-white text-2xl font-semibold mx-2 whitespace-nowrap"
             >
               à propos
@@ -89,13 +91,17 @@ export default function Header() {
                   />
                 </div>
                 <Link
-                  href="/"
+                  scroll={false}
+                  href="#first-section"
+                  onClick={() => setIsOpen(false)}
                   className="uppercase no-underline text-white text-2xl font-semibold mx-2 my-4"
                 >
                   accueil
                 </Link>
                 <Link
-                  href="/"
+                  scroll={false}
+                  href="#second-section"
+                  onClick={() => setIsOpen(false)}
                   className="uppercase no-underline text-white text-2xl font-semibold mx-2 my-4"
                 >
                   à propos

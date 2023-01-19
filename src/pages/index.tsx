@@ -23,17 +23,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <section>
+        <section id="first-section">
           <HeroCarousel />
         </section>
-        <section className="p-6 sm:py-16 sm:px-28 md:py-20 md:px-32">
+        <section
+          className="p-6 sm:py-16 sm:px-28 md:py-20 md:px-32"
+          id="second-section"
+        >
           <div className="mx-auto lg:flex lg:gap-10 w-80 sm:w-[28rem] md:w-[36rem] lg:w-[55rem]">
             <Image
               src={Section2Image}
               alt="blue living room accent wall"
-              className="object-cover h-48 mt-2 lg:mt-0 sm:h-56 md:h-72 lg:mt-12 lg:h-80 lg:w-[27rem]"
+              className="object-cover h-48 mt-2  sm:h-56 md:h-72 lg:h-80 lg:w-[27rem]"
             />
-            <div className="text-center-bug lg:text-left">
+            <div className="text-center-bug lg:text-left lg:-mt-11">
               <h2 className="pt-3 font-bold text-base sm:text-lg md:text-xl">
                 NOUS CRÉONS DES OPPORTUNITÉS POUR RENDRE DES ENVIRONNEMENTS
                 BEAUX ET SPECTACULAIRES
@@ -79,7 +82,7 @@ export default function Home() {
             <Image
               src={Section4Image}
               alt="blue living room accent wall"
-              className="object-cover h-48 mt-2 lg:mt-0 sm:h-56 md:h-72 lg:mt-2 lg:h-80 lg:w-[27rem]"
+              className="object-cover h-48 mt-2 sm:h-56 md:h-72 lg:h-80 lg:w-[27rem]"
             />
             <div className="text-center-bug lg:text-left">
               <h2 className="pt-3 font-bold text-base sm:text-lg md:text-xl">
