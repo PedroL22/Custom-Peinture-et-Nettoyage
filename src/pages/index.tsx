@@ -1,4 +1,4 @@
-import HeroCarousel from "@/components/HeroCarousel";
+import HeroCarousel from "../components/HeroCarousel";
 import Head from "next/head";
 import Image from "next/image";
 import Section2Image from "../images/blue-living-room-accent-wall.jpeg";
