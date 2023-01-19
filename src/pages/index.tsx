@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Section2Image from "../images/blue-living-room-accent-wall.jpeg";
 import Section3Image from "../images/gray-living-room-accent-wall.jpeg";
+import Section4Image from "../images/blue-living-room-accent-wall2.jpeg";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
             <Image
               src={Section2Image}
               alt="blue living room accent wall"
-              className="object-cover h-48 sm:h-56 md:h-72 lg:mt-12 lg:h-80 lg:w-[27rem]"
+              className="object-cover h-48 mt-2 lg:mt-0 sm:h-56 md:h-72 lg:mt-12 lg:h-80 lg:w-[27rem]"
             />
             <div className="text-center-bug lg:text-left">
               <h2 className="pt-3 font-bold text-base sm:text-lg md:text-xl">
@@ -69,8 +70,34 @@ export default function Home() {
             <Image
               src={Section3Image}
               alt="blue living room accent wall"
-              className="object-cover h-48 sm:h-56 md:h-72 lg:h-80 lg:w-[27rem] border-4 border-white"
+              className="object-cover h-48 mb-2 lg:mb-0 sm:h-56 md:h-72 lg:h-80 lg:w-[27rem] border-4 border-white"
             />
+          </div>
+        </section>
+        <section className="p-6 sm:py-16 sm:px-28 md:py-20 md:px-32">
+          <div className="mx-auto lg:flex lg:gap-10 w-80 sm:w-[28rem] md:w-[36rem] lg:w-[55rem]">
+            <Image
+              src={Section4Image}
+              alt="blue living room accent wall"
+              className="object-cover h-48 mt-2 lg:mt-0 sm:h-56 md:h-72 lg:mt-2 lg:h-80 lg:w-[27rem]"
+            />
+            <div className="text-center-bug lg:text-left">
+              <h2 className="pt-3 font-bold text-base sm:text-lg md:text-xl">
+                VISION
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg">
+                Devenir une entreprise leader dans notre segment dans la région
+                de Montréal, offrant aux gens inspiration, bien-être et joie.
+              </p>
+              <h2 className="pt-3 font-bold text-base sm:text-lg md:text-xl">
+                VALEURS
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg">
+                L&apos;honnêteté, le respect, la créativité et la concentration
+                sont la somme de ce que nous sommes pour valoriser ceux qui
+                croient et apprécient notre travail.
+              </p>
+            </div>
           </div>
         </section>
       </main>
