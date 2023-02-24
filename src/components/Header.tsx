@@ -50,6 +50,7 @@ export default function Header() {
             <Image
               src={Logo}
               alt="logo"
+              placeholder='blur'
               className="w-36 h-36 object-cover mx-4"
             />
           </Link>
@@ -96,6 +97,7 @@ export default function Header() {
             <Image
               src={Logo}
               alt="logo"
+              placeholder='blur'
               className="w-16 h-16  object-cover mx-1"
             />
           </Link>
