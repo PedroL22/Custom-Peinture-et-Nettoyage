@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../images/logo-white2.png";
@@ -9,6 +10,17 @@ import { IoMdClose } from "react-icons/io";
 export default function Header() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [isOpen, setIsOpen] = useState(false);
+  const [transparent, setTransparent] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname === "/") {
+      setTransparent(true);
+    } else {
+      setTransparent(false);
+    }
+  }, [router.pathname]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +39,11 @@ export default function Header() {
   }
 
   return !isMobile ? (
-    <div className="fixed z-20 w-full font-sans header h-32">
+    <div
+      className={`fixed z-20 w-full font-sans header h-32 ${
+        router.pathname === "/" ? "transparent" : "bg-black"
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between">
           <Link href="/">
@@ -59,7 +75,7 @@ export default function Header() {
               projets
             </Link>
             <Link
-              href="/"
+              href="contact"
               className="uppercase no-underline text-white text-2xl font-semibold mx-2 whitespace-nowrap"
             >
               contact
@@ -69,7 +85,11 @@ export default function Header() {
       </div>
     </div>
   ) : (
-    <div className="fixed z-20 w-full font-sans header">
+    <div
+      className={`fixed z-20 w-full font-sans header ${
+        router.pathname === "/" ? "transparent" : "bg-black"
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between">
           <Link href="/">
@@ -113,7 +133,8 @@ export default function Header() {
                   projets
                 </Link>
                 <Link
-                  href="/"
+                  href="contact"
+                  onClick={() => setIsOpen(false)}
                   className="uppercase no-underline text-white text-2xl font-semibold mx-2 my-4"
                 >
                   contact
